@@ -1,0 +1,489 @@
+@import url(reset.css); 
+
+html {
+	border-top: 2px solid #000;
+}
+
+body {
+	background: url(images/bg.gif) repeat-x; 
+}
+
+html, body, td {
+	font-family: Georgia, serif; 
+	font-size: 13px; 
+	line-height: 20px; 
+	color: #444; 
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+p, ul, ol, h1, h2, h3, h4 {
+	margin: 1em 0;
+}
+
+a {
+	color: #2752cc; 
+	text-decoration: none; 
+}
+	a:hover {
+		text-decoration: underline; 
+	}
+
+
+.container {
+	margin: 0 auto;
+	width: 960px; 
+	position: relative; 
+}
+
+/******************************************************************************************************************
+ * MASTHEAD
+ *
+ */
+
+#masthead {
+	height: 131px; 
+	margin-bottom: 20px; 
+	position: relative; 
+}
+	#topnav {
+		margin: 0;
+	}
+		#topnav a {
+			text-transform: uppercase; 
+			position: absolute;
+			display: block;
+			top: 0; 
+			left: 0; 
+			color: #00144e; 
+			border-left: 1px solid #a6b7e2; 
+			letter-spacing: 0.05em;
+			width: 99px; 
+			height: 41px; 
+			line-height: 41px; 
+			font-size: 12px; 
+			text-align: center; 
+		}
+
+		#topnav a:hover,
+		#body_architects #topnav_architects,
+		#body_about #topnav_about, 
+		body.page_skyscrapers #topnav_cities, 
+		body.template_cities #topnav_cities,
+		body.template_city #topnav_cities {
+			background: #ecf1ff; 
+			text-decoration: none;
+		}
+			#topnav a:hover {
+			}
+
+		#topnav #topnav_home {
+			border: none;
+			padding: 0; 
+			width: 500px; 
+			text-align: left;
+		}
+			#topnav #topnav_home:hover {
+				background: none; 
+			}
+		#topnav #topnav_cities {
+			position: absolute;
+			left: 660px; 
+		}
+		#topnav #topnav_architects {
+			position: absolute;
+			left: 760px; 
+		}
+		#topnav #topnav_about {
+			position: absolute; 
+			left: 860px; 
+			border-right: 1px solid #a6b7e2;
+		}
+
+	#breadcrumb {
+		position: absolute; 
+		margin: 0; 
+		top: 42px; 
+	}
+
+		#breadcrumb li {
+			display: inline; 
+			color: #6e85c9; 
+			font-size: 12px; 
+			margin-right: 3px; 
+		}
+		#breadcrumb li a {
+			color: #acc1ff; 
+			padding: 0 3px 0 0; 
+		}
+		#breadcrumb li a:hover {
+			color: #fff; 
+		}
+
+	#masthead h1 {
+		position: absolute;
+		font-size: 32px; 
+		top: 55px; 
+		color: #fff; 
+	}
+
+	#parent_label {
+		margin: 0;
+		position: absolute;
+		right: 0;
+		top: 41px;
+		width: 300px;
+		height: 90px; 
+		background: url(images/shade.png);
+	}
+		#parent_label a {
+			position: absolute;
+			left: 20px;
+			bottom: 20px; 
+			color: #fff; 
+			font-size: 18px; 
+		}
+
+/******************************************************************************************************************
+ * CONTENT
+ *
+ */
+
+#content { 
+	width: 640px; 
+	min-height: 410px; 
+	padding-bottom: 2em; 
+}
+	#content.has_map {
+		min-height: 730px; 
+	}
+
+	#content h2 {
+		color: #203570; 
+		font-size: 22px; 
+		margin-bottom: 0; 
+	}
+
+	#content h3 {
+		color: #203570; 
+		font-size: 18px; 
+		margin-bottom: 0; 
+	}
+
+	#content label,
+	#content label a,
+	#content .label,
+	#content table th {
+		text-transform: uppercase;
+		font-size: 11px; 
+		color: #5168a8; 
+		color: #777; 
+		letter-spacing: 0.05em; 
+		font-weight: normal;
+	}
+
+	#content ul.PageArray {
+		float: left; 
+	}
+		#content ul.PageArray li {
+			float: left; 
+			width: 200px; 
+			white-space: nowrap;
+			overflow: hidden; 
+			padding-left: 1px; 
+			margin-right: 12px; 
+		}
+		#body_architects #content ul.PageArray li {
+			width: 300px; 
+		}
+
+	#skyscraper_search {
+		position: absolute;
+		top: 151px;
+		right: 0;
+		width: 260px; 
+		height: 290px; 
+		background: #d3dfff url(images/search_bg.png); 
+		padding: 0 20px 10px 20px; 
+	}
+		#skyscraper_search h3 {
+			margin-top: 0.75em; 
+		}
+		#skyscraper_search label {
+			display: block;
+			text-transform: uppercase;
+			font-size: 11px; 
+			color: #5168a8; 
+		}
+		
+		#skyscraper_search select {
+			width: 250px; 	
+		}
+
+		#skyscraper_search select,
+		#skyscraper_search input {
+			margin: 0;
+		}
+
+		#skyscraper_search #search_submit {
+			margin-top: 2px; 
+		}
+
+		#search_keywords {
+			width: 245px; 
+		}
+		#skyscraper_search p {
+			margin: 5px 0; 
+		}
+
+	#skyscraper_links {
+		position: absolute; 
+		top: 470px; 
+		right: 0; 
+		width: 260px;
+		padding: 0 20px 0 20px; 
+		background: #e9efff; 
+	}
+
+	
+	#map {
+		position: absolute;
+		top: 595px; 
+		right: 0; 
+		width: 300px;
+		height: 300px; 
+	}	
+
+	body.template_skyscraper .has_map #map,
+	body.template_city .has_map #map,
+	body.template_architect .has_map #map,
+	body.template_cities .has_map #map {
+		top: 151px; 
+	}
+		body.template_search .has_map #map,
+		body.template_home .has_map #map {
+			top: 470px; 
+		}
+	body.template_skyscraper .has_map #skyscraper_links,
+	body.template_city .has_map #skyscraper_links,
+	body.template_architect .has_map #skyscraper_links,
+	body.template_home .has_map #skyscraper_links {
+		top: 789px; 
+	}
+		body.template_search .has_map #skyscraper_links,
+		body.template_cities .has_map #skyscraper_links {
+			display: none; 
+		}
+	body.template_skyscraper .has_map #skyscraper_search,
+	body.template_city .has_map #skyscraper_search,
+	body.template_architect .has_map #skyscraper_search,
+	body.template_cities .has_map #skyscraper_search {
+		top: 470px; 
+	}
+
+	span.na {
+		color: #999; 
+		font-weight: normal;
+	}
+
+	table.list_skyscrapers {
+		width: 640px; 
+		clear: both;
+		margin: 1em 0 0 0; 
+		border-bottom: 1px solid #8d9ecd; 
+	}
+		#content > table.list_skyscrapers {
+			margin-top: 0; 
+		}
+		#content h3 + table.list_skyscrapers {
+			margin-top: 1em;
+		}
+		table.list_skyscrapers td,
+		table.list_skyscrapers th {
+			vertical-align: top; 
+			padding: 0 10px; 
+		}
+		table.list_skyscrapers th {
+			padding-top: 2em; 
+			white-space: nowrap; 
+		}
+		table.list_skyscrapers tr.skyscraper_details td {
+			border-top: 1px solid #8d9ecd; 
+		}
+
+		table.list_skyscrapers td p {
+			margin: 0; 
+		}
+
+		table.list_skyscrapers tr.skyscraper_details td {
+			padding-top: 10px; 
+			font-weight: bold; 
+			vertical-align: bottom; 
+		}
+		table.list_skyscrapers tr.skyscraper_details td.skyscraper_image {
+			padding-top: 15px; 
+			padding-right: 7px; 
+			padding-left: 0; 
+			padding-bottom: 10px; 
+			vertical-align: top; 
+		}
+			table.list_skyscrapers tr.skyscraper_details td.skyscraper_image .placeholder {
+				display: block;
+				width: 100px;	
+				height: 100px; 
+				background: url(images/thumb_placeholder.gif) no-repeat; 
+				text-indent: -9999px; 
+			}
+			table.list_skyscrapers tr.skyscraper_details td.skyscraper_image .placeholder2 {
+				background: url(images/thumb_placeholder2.gif) no-repeat; 
+			}
+			table.list_skyscrapers td.skyscraper_image img,
+			table.list_skyscrapers .placeholder {
+				border: 1px solid #8d9ecd; 
+			}
+		table.list_skyscrapers tr.skyscraper_summary td {
+			padding-bottom: 10px; 
+		}
+		table.list_skyscrapers tr.skyscraper_summary td  {
+			vertical-align: top; 
+		}
+		table.list_skyscrapers tr.skyscraper_summary td p {
+			border-top: 1px dotted #ccc; 
+			padding-top: 5px; 
+		}	
+
+	/**
+	 * .selector_note appears at the bottom of skyscraper lists to show what selector found the skyscrapers
+	 *	
+ 	 */
+	.selector_note {
+		clear: both; 
+		padding-top: 2em; 
+		margin-bottom: 0; 
+	}
+
+	/**
+	 * MarkupPagerNav classes are for the pagination buttons
+	 *
+	 */
+	#content .MarkupPagerNav {
+		clear: both; 
+		margin: 1em 0;
+		font-family: Arial, sans-serif; 
+	}
+		#content table + .MarkupPagerNav {
+			border-top: 1em solid #fff; 
+		}
+		#content > .MarkupPagerNav {
+			margin-top: 0;
+		}
+
+		#content .MarkupPagerNav li {
+			display: inline;
+		}
+
+		#content .MarkupPagerNav li a,
+		#content .MarkupPagerNav li.MarkupPagerNavSeparator {
+			display: block;
+			float: left; 
+			padding: 2px 9px; 
+			background: #457f2c; 
+			margin-right: 3px; 
+			color: #fff; 
+			font-size: 10px;
+			font-weight: bold;
+			text-transform: uppercase; 
+		}
+			#content .MarkupPagerNav li.MarkupPagerNavOn a,
+			#content .MarkupPagerNav li a:hover {
+				background: #81b769; 
+				text-decoration: none; 
+			}
+
+			#content .MarkupPagerNav li.MarkupPagerNavSeparator {
+				color: #457f2c; 
+				background: none; 
+				padding-left: 3px;
+				padding-right: 3px; 
+			}
+
+	/**
+	 * These alignment classes are used by the rich text editor for image alignment in copy
+	 *
+	 */
+
+	.align_left {
+		float: left;
+		margin: 0 1em 0.5em 0;
+	}
+
+	.align_right {
+		float: right;
+		margin: 0 0 0.5em 1em; 
+	}
+
+	.align_center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+
+/******************************************************************************************************************
+ * FOOTER
+ *
+ */
+
+#footer {
+	clear: both; 
+	padding-top: 28px; 
+	background: url(images/bg_foot.gif) top left repeat-x; 
+}
+	#footer .container {
+	}
+
+	#copyright {
+		font: 11px/13px Arial, sans-serif;
+		color: #999; 
+		padding-bottom: 2em;
+	}
+		#copyright a {
+			color: #888;
+			text-decoration: underline; 
+		}
+			#copyright a:hover {
+				color: #333; 
+			}
+
+	#editpage {
+		position: absolute;
+		top: 0;
+		left: 0; 
+		color: #fff; 
+		background: #000; 
+		padding: 0 5px; 
+		font-size: 12px; 
+		text-transform: lowercase; 
+	}
+		#editpage:hover {
+			color: #000;
+			background: #ffffcc;
+			text-decoration: none; 
+		}
+
+	span.ProCache {
+		display: none; 
+	}
+
+	body.ProCache span.ProCache {
+		display: inline; 
+	}
+
+
